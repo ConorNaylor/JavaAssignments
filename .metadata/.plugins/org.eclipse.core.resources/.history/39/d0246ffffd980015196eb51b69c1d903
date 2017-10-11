@@ -1,0 +1,40 @@
+package lab9;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class LeagueStatsTest {
+	
+	LeagueStats leagueStats = new LeagueStats();
+	
+	@Before
+	public void setUp() throws Exception{
+	
+
+	League league = new League("PShip");
+	leagueStats.add(league);
+	
+	Division div1 = new Division("1");
+	Division div2 = new Division("2");
+	
+	league.add(div1);
+	league.add(div2);
+	
+	}
+	@Test
+	public void getNumDivisionsTest() {
+		int expected = 2;
+		
+		int actualResult = leagueStats.getNumDivisions();
+		
+		assertEquals(expected, actualResult);
+	}
+	
+	@Test
+	public void getNumTeamsTest() {
+		fail("Not yet implemented");
+	}
+
+}

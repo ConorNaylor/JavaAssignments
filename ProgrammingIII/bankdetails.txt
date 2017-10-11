@@ -1,0 +1,7 @@
+Name: John, Account Number: 1010, Balance: $0.0
+Name: John, Account Number: 1011, Balance: $1000.0
+Name: John, Account Number: 1012, Balance: $2000.0
+Name: John, Account Number: 1013, Balance: $3000.0
+Name: John, Account Number: 1014, Balance: $4000.0
+
+ Append this line to the end of the file.

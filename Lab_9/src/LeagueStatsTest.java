@@ -1,0 +1,104 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class LeagueStatsTest {
+	
+	LeagueStats leagueStats = new LeagueStats();
+	
+	@Before
+	public void setUp() throws Exception{
+		
+		League league = new League("Premiership");
+		leagueStats.add(league);
+		
+		Division div1 = new Division("first");
+		Division div2 = new Division("second");
+		
+		league.add(div1);
+		league.add(div2);
+		
+		Team team1 = new Team("liverpool");
+		Team team2 = new Team("man utd");
+		Team team3 = new Team("arsenal");
+		Team team4 = new Team("totenham");
+		
+		div1.add(team1);
+		div1.add(team2);
+		div2.add(team3);
+		div2.add(team4);
+		
+		Player player1 = new Player("saurez",0, 20);
+		Player player2 = new Player("messi", 0, 20);
+		Player player3 = new Player("ronaldo", 0, 20);
+		Player player4 = new Player("gerrard", 0, 20);
+		Player player5 = new Player("xabi", 0, 20);
+		Player player6 = new Player("alonso", 0, 20);
+		Player player7 = new Player("neymar",0, 20);
+		Player player8 = new Player("coutinho", 0, 20);
+		Player player9 = new Player("costa",0,20);
+		Player player10 = new Player("hazard",0,20);
+		Player player11 = new Player("sakho",0,20);
+		Player player12 = new Player("mikel",0,20);
+		
+		
+		team1.add(player1);
+		team1.add(player2);
+		team1.add(player3);
+		team2.add(player4);
+		team2.add(player5);
+		team2.add(player6);
+		team3.add(player7);
+		team3.add(player8);
+		team3.add(player9);
+		team4.add(player10);
+		team4.add(player11);
+		team4.add(player12);
+		
+	}
+
+	@Test
+	public void getNumDivisionsTest() {
+
+		int expected = 2;
+		
+		int actualResult = leagueStats.getNumDivisions();
+		
+		assertEquals(expected, actualResult);
+	}
+	@Test
+	public void getNumTeamsTest() {
+		
+		int expected2 = 4;
+		
+		int actualResult2 = leagueStats.getNumTeams();
+		
+		assertEquals(expected2, actualResult2);
+	}
+	@Test
+	public void getNumsGoalsForDivisionsTest() {
+		int expected3 = 1;
+		
+		int actualResult3 = leagueStats.getNumGoalsForDivision();
+		
+		assertEquals(expected3, actualResult3);
+	}
+	@Test
+	public void getNumGoalsForTeamTest() {
+		int expected4 = 1;
+		
+		int actualResult4 = leagueStats.getNumGoalsForTeam();
+		
+		assertEquals(expected4, actualResult4);
+	}
+	@Test
+	public void getAvgAgeOfTeamTest() {
+		int expected5 = 20;
+		
+		int actualResult5 = leagueStats.getAngAgeOfTeam();
+		
+		assertEquals(expected5, actualResult5);
+	}
+}

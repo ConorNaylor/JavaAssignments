@@ -1,0 +1,47 @@
+package assignment3;
+
+import java.io.IOException;
+
+public class CustomAccDetails {
+
+	private String name;
+	private int accountNum;
+	private int balance;
+	
+	public CustomAccDetails(String name, int accountNum, int balance){
+		this.name = name;
+		this.accountNum = accountNum;
+		this.balance = balance;
+	}
+	
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+
+	public int getAccountNum() {
+		return accountNum;
+	}
+
+	public void setAccountNum(int accountNum) {
+		this.accountNum = accountNum;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	@Override
+	public String toString() {
+		return "Name: " + name + ", Account Number: " + accountNum + ", Balance: $" + balance + ".";
+	}
+}
+
+

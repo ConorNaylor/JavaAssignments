@@ -1,0 +1,11 @@
+package lab10;
+
+public class AUD extends Currency {
+	
+	private String name = "AUD";
+
+	public AUD(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

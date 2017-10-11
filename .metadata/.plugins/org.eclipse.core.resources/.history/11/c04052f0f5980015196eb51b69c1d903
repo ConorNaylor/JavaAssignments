@@ -1,0 +1,15 @@
+package lab9;
+
+public class LeagueStats {
+
+	public void add(League league) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public int getNumDivisions() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

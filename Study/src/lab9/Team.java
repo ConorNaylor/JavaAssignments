@@ -1,0 +1,28 @@
+package lab9;
+
+import java.util.ArrayList;
+
+public class Team {
+	
+	private ArrayList<Player> players = new ArrayList<Player>();
+	
+	private String name;
+
+	public Team(String string) {
+		this.name = string;
+	}
+
+	public int getNumGoals() {
+		int goals = 0;
+		for(Player p: players){
+			goals = p.numGoals();
+		}
+		return goals;
+	}
+
+	public void add(Player player1) {
+		players.add(player1);
+		
+	}
+
+}

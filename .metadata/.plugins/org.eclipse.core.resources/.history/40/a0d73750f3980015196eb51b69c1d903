@@ -1,0 +1,10 @@
+package lab9;
+
+public class League {
+	
+	private String name;
+
+	public String League(String string){
+		return this.name = string;
+	}
+}

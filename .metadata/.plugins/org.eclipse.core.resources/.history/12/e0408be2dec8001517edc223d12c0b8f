@@ -1,0 +1,71 @@
+package QueueArray;
+import javax.swing.JOptionPane;
+
+public class QueueCircularArray implements Queue  {
+	
+	protected Object Q[];						// Array used to represent queue
+	protected int rear = 0;						// Rear of queue
+	protected int front = 0;					// Front of queue
+	protected int capacity = 5; 				// This is the actual capacity
+	public static final int CAPACITY = 1000;	// This is the default array capacity
+	 
+	 public QueueCircularArray(){
+	        this(CAPACITY);
+	    }
+
+	public QueueCircularArray(int cap) {
+		 capacity = (cap > 0) ? cap : CAPACITY ;
+	     Q = new Object[capacity];
+	}
+
+	@Override
+	public void enqueue(Object n) {
+		if(isFull()){
+			JOptionPane.showMessageDialog(null, "Can't enqueue object, queue is full.");
+			return;
+		}
+		Q[rear] = n;
+		rear = (rear + 1) % capacity;
+		capacity++;
+	}
+
+	@Override
+	public Object dequeue() {
+		Object i;
+		if(isEmpty()){
+		return null;
+		}
+		else{
+			i = Q[front];
+			Q[front] = null;
+			front = (front + 1) % capacity;
+			capacity--;
+		}
+		return i;
+		
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return(capacity == Q.length ) ? true : false;
+	}
+
+	@Override
+	public boolean isFull() {
+		return(capacity == 0);
+//		int difference = rear - front;
+//		if(difference == -1 || difference == (capacity -1) )
+//			return true;
+//		return false;
+	}
+
+	@Override
+	public Object front() {
+		 if (isEmpty())
+			 return null;
+		 
+		 return Q[front];
+	}
+
+
+}

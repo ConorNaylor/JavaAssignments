@@ -1,0 +1,16 @@
+package assignment3;
+
+import java.io.*;
+
+public class TestClass {
+
+	public static void main(String[] args) throws IOException{
+		
+	CreateFile cf = new CreateFile();	
+	
+	cf.makeAccounts();
+	cf.writeToFile();
+	cf.readFromFile();
+		
+	}
+}

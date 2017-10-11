@@ -1,0 +1,20 @@
+
+public class Calculator
+{
+
+	public Calculator()
+	{
+	}
+	
+	int[] array = new int[25];
+	double avg;
+	int total;
+	
+	public double getAverage(int number)
+	{
+		total += number;
+		return avg = number / array.length;
+		
+	}
+
+}

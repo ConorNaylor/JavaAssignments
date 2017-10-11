@@ -1,0 +1,13 @@
+package lab10;
+
+public class USD extends Currency{
+
+	
+	public USD(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+	private String name;
+	
+	
+}

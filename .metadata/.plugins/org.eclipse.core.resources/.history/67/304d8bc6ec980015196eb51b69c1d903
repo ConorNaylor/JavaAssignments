@@ -1,0 +1,50 @@
+package lab8;
+
+import java.util.ArrayList;
+
+public class Directory extends AbstractFile{
+	
+	private ArrayList<AbstractFile> files = new ArrayList<AbstractFile>();
+
+	public Directory(String string) {
+		this.name = string;
+	}
+
+	public void add(File a) {
+		this.files.add(a);
+		
+	}
+
+	public void add(Directory music) {
+		this.files.add(music);
+		
+	}
+	@Override
+	public int size() {
+		int size=0;
+		for(AbstractFile file: files)
+			size+=file.size();
+		return size;
+	}
+	@Override
+	public int getNumFiles() {
+		int filesize=0;
+		for(AbstractFile file: files){
+			filesize+=file.getNumFiles();
+		}
+		return filesize;
+	}
+	@Override
+	public int getNumFolders() {
+		int numFolders = 0;
+		for(AbstractFile file: files){
+			if(file instanceof Directory){
+				numFolders++;
+				numFolders+=file.getNumFolders();
+			}
+		}
+		return numFolders;
+	}
+
+
+}

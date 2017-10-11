@@ -1,0 +1,12 @@
+package week6;
+
+public class Zoo {
+	
+	public static void main(String[] args){
+	
+	Canary bob = new Canary("Bob", 2 , 3);
+	
+	System.out.println(bob);
+
+	}
+}

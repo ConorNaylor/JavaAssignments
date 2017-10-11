@@ -1,0 +1,32 @@
+package Assignment2.QueueArray;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter string to be inputted: ");
+		
+		String[] array = new String[5];
+		String[] array2 = new String[5];
+		
+		int i = 0;
+		while(scanner.hasNextLine()){
+			array[i] = scanner.nextLine();
+			i++;
+			if(i == 5)
+				break;
+		}
+		
+		int j = 0;
+		while(scanner.hasNextLine()){
+			array2[i] = scanner.nextLine();
+			j++;
+			if(j == 5)
+				break;
+		}
+	}
+}
+	
+

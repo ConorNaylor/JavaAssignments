@@ -1,0 +1,30 @@
+package lab9;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class LeagueStatsTest {
+	
+	LeagueStats leagueStats = new LeagueStats();
+
+	League league = new League("PShip");
+	leagueStats.add();
+	
+	Division div1 = new Division("1");
+	Division div2 = new Division("2");
+	
+	league.add(div1);
+	league.add(div2);
+	
+	@Test
+	public void getNumDivisionsTest() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void getNumTeamsTest() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,14 @@
+package lab2;
+
+public class Date {
+
+	public Date(Day day, Month month, Year year) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void printName() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

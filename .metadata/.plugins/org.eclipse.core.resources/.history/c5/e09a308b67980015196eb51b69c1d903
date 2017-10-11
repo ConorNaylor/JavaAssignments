@@ -1,0 +1,9 @@
+package lab2;
+
+public class Month {
+
+	public Month(int in2) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

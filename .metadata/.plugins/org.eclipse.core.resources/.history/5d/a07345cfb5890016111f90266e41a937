@@ -1,0 +1,45 @@
+package assignment3;
+
+import java.io.*;
+
+import assignment3.AccDetails;
+
+public class CreateFile {
+
+	private AccDetails[] a = new AccDetails[10];
+	
+	public void makeAccounts(){
+		for(int i = 0; i < a.length; i++){
+		a[i] = new AccDetails( "s", i, 1000.0*i);
+		}
+	}
+	
+	
+	public void writeToFile() throws IOException{
+		FileOutputStream FOS = new FileOutputStream("bankdetails.ser");
+		ObjectOutputStream OOS = new ObjectOutputStream(FOS);
+		for(int i = 0; i < a.length - 1 ; i++){
+		OOS.writeObject(a[i].toString());
+		}
+		OOS.flush();
+	}
+	
+	public void readFromFile() throws IOException, ClassNotFoundException{
+		FileInputStream FIS = new FileInputStream("bankdetails.ser");
+		ObjectInputStream OIS = new ObjectInputStream(FIS);
+		//AccDetails readCase = (AccDetails) OIS.readObject();
+		AccDetails[] deets = new AccDetails[a.length];
+		for(int i = 0; i < a.length - 1; i++){
+			deets[1] = (AccDetails)OIS.readObject();
+//			String name = OIS.readLine();
+//			int accNum = OIS.readInt();
+//			double balance = OIS.readDouble();		
+//			deets[i] = new AccDetails(name,accNum,balance);
+		}
+		
+		for(int j = 0; j < a.length - 1; j++){
+			System.out.println(deets[1].toString());
+		}
+	}
+}
+

@@ -1,0 +1,62 @@
+package assignment3;
+
+import java.io.*;
+import java.util.*;
+
+public class CustomCreateFile {
+	
+	private ArrayList<CustomAccDetails> a = new ArrayList<>();
+	private ArrayList<CustomAccDetails> b = new ArrayList<>();
+	
+	public void makeAccounts(){
+//		for(int i = 0; i < 2; i++){
+			a.add(new CustomAccDetails( "s", 1010, 1000.0));
+//		}
+	}
+	
+	
+	public void writeToFile() throws IOException{
+		FileWriter fw = new FileWriter("assignment3.txt");
+		PrintWriter pw = new PrintWriter(fw);
+		makeAccounts();
+		for(int i = 0; i < a.size(); i++){
+			pw.println(a);
+			}
+		pw.flush();
+		pw.close();
+	}
+	
+	public void readFromFile() throws IOException, ClassNotFoundException{
+		FileReader fr = new FileReader("assignment3.txt");
+		BufferedReader br = new BufferedReader(fr);
+		String name;
+		int accNo;
+		double balance;
+		String line = br.readLine();
+		while(line != null){
+			name = br.readLine();
+			accNo = br.read();
+			balance = (Double.valueOf(br.readLine()));
+			CustomAccDetails cad = new CustomAccDetails(name, accNo, balance);
+			b.add(cad);
+			System.out.println(b);
+		}		
+//		for(int j = 0; j < b.size(); j++){
+//			System.out.println(b);
+//		}
+	}
+
+	public static void main(String[] args) throws IOException{
+		
+		CustomCreateFile cf = new CustomCreateFile();	
+		
+		cf.makeAccounts();
+		cf.writeToFile();
+		try {
+			cf.readFromFile();
+		} catch (ClassNotFoundException e) {
+			System.out.println("Error");
+		}
+			
+	}
+}

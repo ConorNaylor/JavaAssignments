@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;TwoSemsterTwo/src/Assignment2/QueueArray/QueueString.java&apos;" deleteContents="false" description="Delete resource &apos;TwoSemsterTwo/src/Assignment2/QueueArray/QueueString.java&apos;" element1="/TwoSemsterTwo/src/Assignment2/QueueArray/QueueString.java" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1455712040164"/>
+</session>

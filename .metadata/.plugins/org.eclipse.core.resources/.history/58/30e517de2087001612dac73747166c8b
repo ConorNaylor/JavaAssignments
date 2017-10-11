@@ -1,0 +1,27 @@
+package assignment3;
+
+import java.io.*;
+
+import assignment3.AccDetails;
+
+public class CreateFile {
+
+	private AccDetails[] a = new AccDetails[10];
+	
+	public void makeAccounts(){
+		for(int i = 0; i < a.length; i++){
+		a[i] = new AccDetails( "s", i, 1000.0*i);
+		}
+	}
+	
+	
+	public void writeToFile() throws IOException{
+		FileOutputStream FOS = new FileOutputStream("bankdetails.txt");
+		ObjectOutputStream OOS = new ObjectOutputStream(FOS);
+		for(int i = 0; i < a.length; i++){
+		OOS.writeObject(a[i].toString() + "\n");
+		}
+		OOS.close();
+	}
+}
+

@@ -1,0 +1,61 @@
+package assignment3;
+
+import java.io.IOException;
+
+public class AccDetails implements java.io.Serializable{
+
+	private String name;
+	private int accountNum;
+	private double balance;
+	
+	public AccDetails(String name, int accountNum, double balance){
+		this.name = name;
+		this.accountNum = accountNum;
+		this.balance = balance;
+	}
+	
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+
+	public int getAccountNum() {
+		return accountNum;
+	}
+
+	public void setAccountNum(int accountNum) {
+		this.accountNum = accountNum;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(float balance) {
+		this.balance = balance;
+	}
+
+	@Override
+	public String toString() {
+		return "Name: " + name + ", Account Number: " + accountNum + ", Balance: $" + balance + ".";
+	}
+	
+	public static void main(String[] args) throws IOException{
+		
+		CreateFile cf = new CreateFile();	
+		
+		cf.makeAccounts();
+		cf.writeToFile();
+		try {
+			cf.readFromFile();
+		} catch (ClassNotFoundException e) {
+			System.out.println("Error");
+		}
+			
+		}
+}
+
+

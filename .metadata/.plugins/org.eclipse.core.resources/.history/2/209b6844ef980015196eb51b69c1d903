@@ -1,0 +1,23 @@
+package lab8;
+
+public class Directory extends AbstractFile{
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getnumFolders() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getnumFiles() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

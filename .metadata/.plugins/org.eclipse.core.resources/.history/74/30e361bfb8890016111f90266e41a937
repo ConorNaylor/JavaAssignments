@@ -1,0 +1,20 @@
+package assignment3;
+
+import java.io.*;
+
+public class TestClass {
+
+	public static void main(String[] args) throws IOException{
+		
+	CreateFile cf = new CreateFile();	
+	
+	cf.makeAccounts();
+	cf.writeToFile();
+	try {
+		cf.readFromFile();
+	} catch (ClassNotFoundException e) {
+		System.out.println("Error");
+	}
+		
+	}
+}

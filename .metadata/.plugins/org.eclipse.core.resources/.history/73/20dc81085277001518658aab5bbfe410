@@ -1,0 +1,14 @@
+
+public class Study1 {
+	
+	public static void main(String args[]){
+		String one = "Potatoes";
+		String two = "Spuds";
+		String three = "Mash";
+		
+		System.out.println("I like" + one + ", " + two + ", " + three );
+		
+	}
+	
+
+}

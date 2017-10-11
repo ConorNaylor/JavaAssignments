@@ -1,0 +1,10 @@
+
+public class Tuna {
+	public static void main(String args[]){
+		Study1 tunaO = new Study1();
+		System.out.println( tunaO.toMilitary());
+		tunaO.setTime(13,14,18);
+		
+}
+
+}

@@ -1,0 +1,43 @@
+package lab10;
+
+public class Wallet {
+	
+	private String name;
+	
+	public Wallet(String string) {
+		this.name = string;
+	}
+
+	public void addCurrency(Currency currency){
+		
+	}
+	
+	/*
+	 * This method calculates and returns the total Euro value of 
+	 * each currency in the wallet
+	*/
+	public double getTotalEuroValue(){
+		//TODO
+		return 0.0;
+	}
+	
+	/*
+	 * This method sorts the currencies in ascending order according to their euro Values
+	*/
+	public void sort(){
+		//TODO
+	}
+	
+	@Override
+	/*
+	 * The toString() method returns a String value of each currency and its amount in the wallet
+	 * each currency- amount pair is separated by a comma
+	 * e.g. USD:100,CAD:250,GBP:99,AUD:123
+	 * 
+	*/
+	public String toString(){
+		//TODO
+		return null;
+	}
+	
+}

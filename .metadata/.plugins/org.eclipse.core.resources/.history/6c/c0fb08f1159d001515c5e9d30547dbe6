@@ -1,0 +1,11 @@
+package lab10;
+
+public class CAD extends Currency {
+
+	private String name = "CAD";
+	
+	public CAD(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

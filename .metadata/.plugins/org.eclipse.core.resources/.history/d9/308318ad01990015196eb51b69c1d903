@@ -1,0 +1,11 @@
+package lab9;
+
+public class Team {
+	
+	private String name;
+
+	public Team(String string) {
+		this.name = string;
+	}
+
+}

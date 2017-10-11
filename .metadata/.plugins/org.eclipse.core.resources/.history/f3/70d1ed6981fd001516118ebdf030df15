@@ -1,0 +1,125 @@
+package BinaryTree;
+
+/** Class to demonstrate the use of BinaryTree code. 
+ * Based on code by Carrano & Savitch.
+ */
+
+public class BinaryTreeDemo 
+{
+	public static void main(String[] args) 
+	{
+		// Create a tree
+		System.out.println("Constructing a test tree ...");
+		BinaryTree<String> testTree = new BinaryTree<String>();
+		BinaryTree<String> testTree1 = new BinaryTree<String>();
+		createTree1(testTree);
+		createTreeHeightFive(testTree1);
+		
+//		BinaryTree<String> testTree = MMExtra.createRecursiveTree(3);
+		
+		// Display some statistics about it
+		System.out.println("\nSome statistics about the test tree ...");
+		displayStats(testTree);
+		
+		// Perform in-order traversal
+		System.out.println("\nIn-order traversal of the test tree, printing each node when visiting it ...");
+		testTree.inorderTraverse();
+		
+		System.out.println("\nPre-order traversal of the test tree, printing each node when visiting it ...");
+		testTree.preorderTraverse();
+		
+		System.out.println("\nPost-order traversal of the test tree, printing each node when visiting it ...");
+		testTree.postorderTraverse();
+		
+		System.out.println("\nBreadth-first traversal of the test tree, printing each node when visiting it ...");
+		testTree.breathfirstTraverse();
+		
+		System.out.println("\nPre-order traversal of the test tree1, printing each node when visiting it ...");
+		testTree1.preorderTraverse();
+		
+		System.out.println("\nPost-order traversal of the test tree1, printing each node when visiting it ...");
+		testTree1.postorderTraverse();
+		
+		System.out.println("\nBreadth-first traversal of the test tree1, printing each node when visiting it ...");
+		testTree1.breathfirstTraverse();
+		
+	} // end of main
+	
+	public static void createTree1(BinaryTree<String> tree)
+	{
+		// To create a tree, build it up from the bottom:
+		// create subtree for each leaf, then create subtrees linking them,
+		// until we reach the root.
+		
+	  	System.out.println("\nCreating a treee that looks like this:\n");
+	  	System.out.println("     A      ");
+	        System.out.println("   /   \\   "); // '\\' is the escape character for backslash
+	        System.out.println("  B     C   ");
+	        System.out.println(" / \\   / \\");
+	        System.out.println("D   E  F  G ");
+	        System.out.println();
+
+    	        // First the leaves
+		BinaryTree<String> dTree = new BinaryTree<String>();
+		dTree.setTree("D");
+		// neater to use the constructor the initialisation ...
+		BinaryTree<String> eTree = new BinaryTree<String>("E");
+		BinaryTree<String> fTree = new BinaryTree<String>("F");
+		BinaryTree<String> gTree = new BinaryTree<String>("G");
+		
+		// Now the subtrees joining leaves:
+		BinaryTree<String> bTree = new BinaryTree<String>("B", dTree, eTree);
+		BinaryTree<String> cTree = new BinaryTree<String>("C", fTree, gTree);
+
+		// Now the root
+		tree.setTree("A", bTree, cTree);
+	} // end createTree1
+	
+	public static void createTreeHeightFive(BinaryTree<String> tree){
+		BinaryTree<String> pTree = new BinaryTree<String>("P");
+		BinaryTree<String> qTree = new BinaryTree<String>("Q");
+		BinaryTree<String> rTree = new BinaryTree<String>("R");
+		BinaryTree<String> sTree = new BinaryTree<String>("S");
+		BinaryTree<String> tTree = new BinaryTree<String>("T");
+		BinaryTree<String> uTree = new BinaryTree<String>("U");
+		BinaryTree<String> vTree = new BinaryTree<String>("V");
+		BinaryTree<String> wTree = new BinaryTree<String>("W");
+		BinaryTree<String> xTree = new BinaryTree<String>("X");
+		BinaryTree<String> yTree = new BinaryTree<String>("Y");
+		BinaryTree<String> zTree = new BinaryTree<String>("Z");
+		BinaryTree<String> aaTree = new BinaryTree<String>("AA");
+		BinaryTree<String> bbTree = new BinaryTree<String>("BB");
+		BinaryTree<String> ccTree = new BinaryTree<String>("CC");
+		BinaryTree<String> ddTree = new BinaryTree<String>("DD");
+		BinaryTree<String> eeTree = new BinaryTree<String>("EE");
+		
+		BinaryTree<String> hTree = new BinaryTree<String>("H", pTree, qTree);
+		BinaryTree<String> iTree = new BinaryTree<String>("I", rTree, sTree);
+		BinaryTree<String> jTree = new BinaryTree<String>("J", tTree, uTree);
+		BinaryTree<String> kTree = new BinaryTree<String>("K", vTree, wTree);
+		BinaryTree<String> lTree = new BinaryTree<String>("L", xTree, yTree);
+		BinaryTree<String> mTree = new BinaryTree<String>("M", zTree, aaTree);
+		BinaryTree<String> nTree = new BinaryTree<String>("N", bbTree,ccTree);
+		BinaryTree<String> oTree = new BinaryTree<String>("O", ddTree, eeTree);
+		BinaryTree<String> dTree = new BinaryTree<String>("D", hTree, iTree);
+		BinaryTree<String> eTree = new BinaryTree<String>("E", jTree, kTree);
+		BinaryTree<String> fTree = new BinaryTree<String>("F", lTree, mTree);
+		BinaryTree<String> gTree = new BinaryTree<String>("G", nTree, oTree);
+		BinaryTree<String> bTree = new BinaryTree<String>("B", dTree, eTree);
+		BinaryTree<String> cTree = new BinaryTree<String>("C", fTree, gTree);
+		tree.setTree("A", bTree, cTree);
+	}
+
+	
+	public static void displayStats(BinaryTree<String> tree)
+	{
+		if (tree.isEmpty())
+			System.out.println("The tree is empty");
+		else
+			System.out.println("The tree is not empty");
+		
+		System.out.println("Root of tree is " + tree.getRootData());
+		System.out.println("Height of tree is " + tree.getHeight());
+		System.out.println("No. of nodes in tree is " + tree.getNumberOfNodes());
+	} // end displayStats 
+}

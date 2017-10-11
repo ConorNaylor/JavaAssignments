@@ -1,0 +1,17 @@
+
+public class Study1 {
+	
+	public static void main(String args[]){
+		System.out.println(average(23,23,24,25,26));
+		
+		}
+	public static int average(int ... numbers){
+		int total = 0;
+		for(int c:numbers)
+		total +=c;
+		
+		return total/numbers.length;
+	}
+	
+
+}

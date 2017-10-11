@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class testClass 
+{
+	public static void main(String[] args)
+	{
+		Calculator calc = new Calculator();
+		for(int p = 0; p < 100; p++)
+		{
+			System.out.println("Enter number to be averaged: ");
+			Scanner sc = new Scanner(System.in);
+			int i = sc.nextInt();
+			calc.getAverage(i);
+		}
+	}
+}

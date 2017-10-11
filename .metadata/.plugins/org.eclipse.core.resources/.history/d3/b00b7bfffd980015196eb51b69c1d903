@@ -1,0 +1,11 @@
+package lab9;
+
+public class Division {
+	
+	private String name;
+
+	public Division(String string) {
+		this.name = string;
+	}
+
+}

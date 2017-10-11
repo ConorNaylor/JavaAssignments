@@ -1,0 +1,9 @@
+package lab2;
+
+public class Year {
+
+	public Year(int in3) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class Calculator
+{
+
+	public Calculator()
+	{
+	}
+	
+	ArrayList array1 = new ArrayList();
+	double avg;
+	int total;
+	
+	public double getAverage(int number)
+	{
+		array1.add(number);
+		total += number;
+		avg = total / array1.size();
+		return avg;
+	}
+
+}

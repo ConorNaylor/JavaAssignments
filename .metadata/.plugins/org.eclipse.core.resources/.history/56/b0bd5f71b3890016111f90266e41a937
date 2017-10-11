@@ -1,0 +1,42 @@
+package assignment3;
+
+import java.io.*;
+import java.util.ArrayList;
+
+import assignment3.AccDetails;
+
+public class CreateFile {
+
+	private AccDetails[] a = new AccDetails[10];
+	
+	public void makeAccounts(){
+		for(int i = 0; i < a.length; i++){
+		a[i] = new AccDetails( "s", i, 1000.0*i);
+		}
+	}
+	
+	
+	public void writeToFile() throws IOException{
+		FileOutputStream FOS = new FileOutputStream("bankdetails.ser");
+		ObjectOutputStream OOS = new ObjectOutputStream(FOS);
+		for(int i = 0; i < a.length - 1 ; i++){
+		OOS.writeObject(a[i].toString());
+		}
+		OOS.flush();
+		OOS.close();
+	}
+	
+	public void readFromFile() throws IOException, ClassNotFoundException{
+		FileInputStream FIS = new FileInputStream("bankdetails.ser");
+		ObjectInputStream OIS = new ObjectInputStream(FIS);
+		AccDetails readCase = (AccDetails) OIS.readObject();
+		ArrayList deets = new ArrayList();
+		for(int i = 0; i < a.length - 1; i++){
+		deets.add(readCase);
+		for(int j = 0; j < a.length - 1; j++){
+			System.out.println(deets.toString());
+		}
+		}
+	}
+}
+

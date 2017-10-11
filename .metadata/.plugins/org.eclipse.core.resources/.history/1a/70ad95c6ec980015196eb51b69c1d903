@@ -1,0 +1,15 @@
+package lab8;
+
+public abstract class AbstractFile {
+	
+	protected String name;
+	
+	public abstract int size();
+	public abstract int getNumFiles();
+	public abstract int getNumFolders();
+	
+	public String getName(){
+	return name;
+	}
+
+}

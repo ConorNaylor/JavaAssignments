@@ -1,0 +1,11 @@
+package lab10;
+
+public class GBP extends Currency {
+	
+	private String name = "GBP";
+
+	public GBP(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

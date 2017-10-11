@@ -1,0 +1,44 @@
+package assignment3;
+
+import java.io.*;
+
+import assignment3.AccDetails;
+
+public class CreateFile {
+	
+//	private FileWriter fw;
+//	private PrintWriter pw;
+	
+	private AccDetails[] a = new AccDetails[10];
+	
+	public void makeAccounts(){
+		for(int i = 0; i < a.length; i++){
+		a[i] = new AccDetails( "s", i, 1000.0*i);
+		}
+	}
+	
+	
+	public void writeToFile() throws FileNotFoundException{
+		FileOutputStream FOS = new FileOutputStream("bankdetails.txt");
+		DataOutputStream DOS = new DataOutputStream(FOS);
+		DOS.
+	}
+//	try {
+//		fw = new FileWriter("Assignment3.txt");
+//		pw = new PrintWriter(fw);
+//	} catch (IOException e) {
+//		System.out.println("Error.");
+//		}
+//	}
+
+	public void writeFile(){
+//		for(int i = 0; i < a.length; i++){
+//			pw.println(a[i]);
+//		}
+//	}		
+	
+//	public void closeFile(){
+//	pw.close();
+	}
+}
+
